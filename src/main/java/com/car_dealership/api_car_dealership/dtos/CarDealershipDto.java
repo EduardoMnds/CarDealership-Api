@@ -30,7 +30,6 @@ public class CarDealershipDto {
     @NotBlank
     private String responsibleName;
 
-
     public @NotBlank String getModelCar() {
         return modelCar;
     }

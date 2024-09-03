@@ -19,6 +19,7 @@ public class CarDealershipService {
         this.carDealershipRepository = carDealershipRepository;
     }
 
+
     @Transactional
     public CarDealershipModel save(CarDealershipModel carDealershipModel) {
         return carDealershipRepository.save(carDealershipModel);
@@ -44,6 +45,5 @@ public class CarDealershipService {
     public void delete(CarDealershipModel carDealershipModel) {
             carDealershipRepository.delete(carDealershipModel);
     }
-
 
 }

@@ -1,6 +1,7 @@
 package com.car_dealership.api_car_dealership.controllers;
 
 import com.car_dealership.api_car_dealership.dtos.CarDealershipDto;
+import com.car_dealership.api_car_dealership.enums.Messages;
 import com.car_dealership.api_car_dealership.models.CarDealershipModel;
 import com.car_dealership.api_car_dealership.services.CarDealershipService;
 import org.springframework.beans.BeanUtils;
@@ -39,7 +40,7 @@ public class CarDealershipController {
         CarDealershipModel carDealershipModel = new CarDealershipModel();
         BeanUtils.copyProperties(carDealerShipDto, carDealershipModel);
         carDealershipModel.setRegistrationDate(LocalDateTime.now(ZoneId.of("UTC")));
-        return ResponseEntity.status(HttpStatus.CREATED).body(carDealershipService.save(carDealershipModel));
+        return ResponseEntity.status(HttpStatus.CREATED).body(Messages.Message_UpdateSuccess);
     }
 
     @GetMapping("/list")
